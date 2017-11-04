@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#536dfe</color>
+    <color name="colorPrimaryDark">#3d5afe</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorControlNormal">#76ff03</color>
+    <color name="textColorPrimary">#ff8f00</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="white_bg">#F6F6F5</color>
+    <color name="black">#000000</color>
+    <color name="black_333">#333333</color>
+    <color name="black_666">#666666</color>
+    <color name="black_999">#999999</color>
+    <color name="blue">#2196f3</color>
+    <color name="purple">#8e24aa</color>
+    <color name="pink">#e91e63</color>
+    <color name="gray_bg">#D6D3CE</color>
+    <color name="gray_text">#d1d1d1</color>
+    <color name="red">#fa4a3d</color>
+    <color name="red_bg">#D05858</color>
+    <color name="red_text">#E74E4C</color>
+    <color name="green_bg">#06B07E</color>
+    <color name="green_text">#18ab1d</color>
+    <color name="yellow">#fdd835</color>
+
+    <color name="alpha">#00000000</color>
+    <color name="white_alpha">#88ffffff</color>
+
+    <color name="wheel_line_color">#58A2EC</color>
+</resources>

@@ -1,0 +1,161 @@
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/bt_ad1"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:text="AlertDialog1"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bt_ad2"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:text="AlertDialog2"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bt_ad3"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:text="AlertDialog3"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bt_ad_list"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:text="AlertDialog list"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bt_ad_sc"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:text="AlertDialog single choice"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bt_ad_mc"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:text="AlertDialog multi choice"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bt_ad_et"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:text="AlertDialog edit text"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bt_pd1"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:text="ProgressDialog1"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bt_pd2"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:text="ProgressDialog2"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bt_fsd"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:text="full screen Dialog"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bt_dpd"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:text="DatePickerDialog"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bt_tpd"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:text="TimePickerDialog"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bt_npd"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:text="NumberPicker+Dialog"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bt_bsd"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:text="BottomSheetDialog"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bt_sb"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:text="Snackbar"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bt_pm"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:text="PopupMenu"
+            android:textAllCaps="false"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

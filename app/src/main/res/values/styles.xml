@@ -1,0 +1,113 @@
+<resources>
+
+    <style name="MainTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorControlNormal">@color/colorControlNormal</item>
+        <item name="android:textColorPrimary">@color/black_333</item>
+        <item name="android:textColorSecondary">@color/gray_bg</item>
+    </style>
+
+    <!--FullscreenDialog主题-->
+    <style name="FullscreenDialogTheme" parent="@android:style/Theme.Material.Light.DialogWhenLarge">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
+    <!--Toolbar主题-->
+    <style name="ToolBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorControlNormal">@color/white</item>
+        <item name="android:textColorPrimary">@color/black</item>
+
+        <!--Toolbar右侧菜单按钮颜色设置-->
+        <item name="android:textColorSecondary">@color/white</item>
+    </style>
+
+    <!--Toolbar菜单主题-->
+    <style name="ToolbarPopupTheme" parent="@style/ThemeOverlay.AppCompat.Light">
+        <!--设置toolbar菜单背景颜色-->
+        <item name="android:colorBackground">@color/white</item>
+        <!--新增一个item，用于控制menu下移-->
+        <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle
+        </item>
+    </style>
+
+    <style name="OverflowMenuStyle" parent="Widget.AppCompat.Light.PopupMenu.Overflow">
+        <!--把该属性改为false即可使menu位置位于toolbar之下-->
+        <item name="overlapAnchor">false</item>
+    </style>
+
+    <!--TabLayoutText主题-->
+    <style name="TabLayoutTextStyle" parent="TextAppearance.Design.Tab">
+        <!--改字体大小-->
+        <!--<item name="android:textSize">@dimen/text_size_12sp</item>-->
+        <!--字体小写-->
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <!--TextInputLayout主题-->
+    <style name="TextInputLayoutTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/yellow</item>
+        <item name="android:colorControlNormal">@color/gray_bg</item>
+    </style>
+
+    <!--EditText主题-->
+    <style name="EditTextTheme1" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:colorControlNormal">@color/black_333</item>
+    </style>
+
+    <!--EditText主题-->
+    <style name="EditTextTheme2" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/red_bg</item>
+        <item name="android:colorControlNormal">@color/black_666</item>
+    </style>
+
+    <!--EditText主题-->
+    <style name="EditTextTheme3" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/green_text</item>
+        <item name="android:colorControlNormal">@color/black_999</item>
+    </style>
+
+    <!--SeekBar主题-->
+    <style name="SeekBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/yellow</item>
+        <item name="android:colorControlNormal">@color/pink</item>
+    </style>
+
+    <!--Button主题-->
+    <style name="ButtonTheme1" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">@color/yellow</item>
+    </style>
+
+    <!--Button主题-->
+    <style name="ButtonTheme2" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">@color/pink</item>
+    </style>
+
+    <!--Button主题-->
+    <style name="ButtonTheme3" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">@color/purple</item>
+    </style>
+
+    <!--SwitchCompat主题-->
+    <style name="SwitchCompatTheme1" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">@color/yellow</item>
+    </style>
+
+    <!--SwitchCompat主题-->
+    <style name="SwitchCompatTheme2" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">@color/pink</item>
+    </style>
+
+    <!--SwitchCompat主题-->
+    <style name="SwitchCompatTheme3" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">@color/purple</item>
+    </style>
+
+</resources>

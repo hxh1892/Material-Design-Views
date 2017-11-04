@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/tb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ToolBarTheme"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:navigationIcon="@mipmap/bt_menu"
+                app:popupTheme="@style/ToolbarPopupTheme"
+                app:title="Material Design"
+                app:titleTextColor="@color/white"/>
+
+            <!--app:logo="@mipmap/ic_launcher"-->
+            <!--app:subtitle="Subtitle"-->
+            <!--app:subtitleTextColor="#0000ff"-->
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabGravity="fill"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextAppearance="@style/TabLayoutTextStyle"
+                app:tabTextColor="@color/gray_text"
+                />
+
+            <!--app:tabIndicatorColor="@color/white"-->
+            <!--app:tabBackground="@color/colorPrimary"-->
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_left"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="login"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="15dp"
+                android:src="@mipmap/ic_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:text="Click to login"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:onClick="rv"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:src="@mipmap/img_list"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:gravity="center_vertical"
+                android:text="RecyclerView"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:onClick="rv_l_r"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:src="@mipmap/img_refresh"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:gravity="center_vertical"
+                android:text="RecyclerView Refresh Load"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:onClick="scro"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:src="@mipmap/img_scroll"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:gravity="center_vertical"
+                android:text="Scrolling"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_right"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@color/colorPrimaryDark"
+        android:clickable="true">
+
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>

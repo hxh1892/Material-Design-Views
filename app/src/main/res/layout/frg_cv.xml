@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="3dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/bg1"/>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/bg2"/>
+
+                    <ImageView
+                        android:id="@+id/img"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="25dp"
+                        android:src="@mipmap/img_hd"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="20dp"
+                        android:layout_toRightOf="@id/img"
+                        android:text="Glad to see you!\r\nPlease use this app as a Android view model to design your app.\r\nThank you!"
+                        android:textColor="@color/white_bg"
+                        android:textSize="15sp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:padding="15dp"
+                        android:src="@mipmap/img_menu"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/iv1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="?android:attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:padding="15dp"
+                            android:src="@mipmap/img_love"/>
+
+                        <ImageView
+                            android:id="@+id/iv2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="?android:attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:padding="15dp"
+                            android:src="@mipmap/img_bookmark"/>
+
+                        <ImageView
+                            android:id="@+id/iv3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="?android:attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:padding="15dp"
+                            android:src="@mipmap/img_share"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="3dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@mipmap/bg3"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:text="This is a CardView.\r\n\r\nYou can click this view that you can experience the changes of shadow in it."
+                    android:textColor="@color/white"
+                    android:textSize="15sp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal">
+
+                    <Button
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="no"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"/>
+
+                    <Button
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="yes"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
+
+

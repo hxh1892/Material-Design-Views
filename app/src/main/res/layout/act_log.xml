@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="close"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:theme="@style/ToolBarTheme"
+            app:title="Login"
+            app:titleTextColor="@color/white"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:theme="@style/TextInputLayoutTheme">
+
+            <EditText
+                android:id="@+id/et1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Input your phone number"
+                android:inputType="number"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:textColor="@color/black_333"
+                android:textSize="15sp"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:theme="@style/TextInputLayoutTheme"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/et2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Input your password"
+                android:inputType="textPassword"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:textColor="@color/black_333"
+                android:textSize="15sp"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:onClick="login"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:theme="@style/ButtonTheme1"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+
