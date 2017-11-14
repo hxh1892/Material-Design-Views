@@ -1,4 +1,4 @@
-package com.hxh.materialdesignviews.recyclerview;
+package com.hxh.mdv.recyclerview;
 
 import android.animation.ObjectAnimator;
 import android.content.Context;
@@ -19,7 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hxh.DisplayUtils;
-import com.hxh.materialdesignviews.R;
+import com.hxh.mdv.R;
 
 import java.util.ArrayList;
 import java.util.List;

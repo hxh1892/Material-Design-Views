@@ -1,4 +1,4 @@
-package com.hxh.materialdesignviews.fragment;
+package com.hxh.mdv.fragment;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
@@ -27,7 +27,7 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.hxh.materialdesignviews.R;
+import com.hxh.mdv.R;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -41,7 +41,7 @@ import static com.hxh.PickerUtils.setDatePickerDividerColor;
 import static com.hxh.PickerUtils.setNumberPickerDividerColor;
 import static com.hxh.PickerUtils.setTimePickerDialogNegativeButtonColor;
 import static com.hxh.PickerUtils.setTimePickerDialogPositiveButtonColor;
-import static com.hxh.materialdesignviews.R.id.set;
+import static com.hxh.mdv.R.id.set;
 
 public class Dia_Fragment extends Fragment implements View.OnClickListener
 {

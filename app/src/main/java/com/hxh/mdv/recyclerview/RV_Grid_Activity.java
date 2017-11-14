@@ -1,4 +1,4 @@
-package com.hxh.materialdesignviews.recyclerview;
+package com.hxh.mdv.recyclerview;
 
 import android.animation.ObjectAnimator;
 import android.content.Context;
@@ -7,8 +7,8 @@ import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -19,12 +19,12 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.TextView;
 
 import com.hxh.DisplayUtils;
-import com.hxh.materialdesignviews.R;
+import com.hxh.mdv.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RV_HorizonGrid_Activity extends AppCompatActivity
+public class RV_Grid_Activity extends AppCompatActivity
 {
     Context mContext = this;
 
@@ -36,7 +36,7 @@ public class RV_HorizonGrid_Activity extends AppCompatActivity
     int lines = 4;
 
     {
-        list.add("Click this view to goto RV_Stagger_Activity");
+        list.add("Click this view to goto RV_HorizonGrid_Activity");
 
         for (int i = 'A'; i <= 'Z'; i++)
         {
@@ -78,7 +78,7 @@ public class RV_HorizonGrid_Activity extends AppCompatActivity
     {
         tb = (Toolbar) findViewById(R.id.tb);
 
-        tb.setTitle("RecyclerView HorizonGrid");
+        tb.setTitle("RecyclerView Grid");
 
         setSupportActionBar(tb);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -97,7 +97,7 @@ public class RV_HorizonGrid_Activity extends AppCompatActivity
     {
         rv = (RecyclerView) findViewById(R.id.rv);
 
-        rv.setLayoutManager(new StaggeredGridLayoutManager(lines, StaggeredGridLayoutManager.HORIZONTAL));
+        rv.setLayoutManager(new GridLayoutManager(mContext, lines));
 
         rv.addItemDecoration(new RecyclerView.ItemDecoration()
         {
@@ -108,16 +108,16 @@ public class RV_HorizonGrid_Activity extends AppCompatActivity
 
                 if (parent.getChildAdapterPosition(view) <= (lines - 1))
                 {
-                    outRect.left = DisplayUtils.dp_to_px(mContext, 5);
+                    outRect.top = DisplayUtils.dp_to_px(mContext, 8);
                 }
 
                 if ((parent.getChildAdapterPosition(view) + 1) % lines == 0)
                 {
-                    outRect.bottom = DisplayUtils.dp_to_px(mContext, 2);
+                    outRect.right = DisplayUtils.dp_to_px(mContext, 5);
                 }
-                else if (parent.getChildAdapterPosition(view) % lines == 0)
+                else if ((parent.getChildAdapterPosition(view)) % lines == 0)
                 {
-                    outRect.top = DisplayUtils.dp_to_px(mContext, 8);
+                    outRect.left = DisplayUtils.dp_to_px(mContext, 5);
                 }
 
                 if (list.size() % 4 == 0)
@@ -125,7 +125,7 @@ public class RV_HorizonGrid_Activity extends AppCompatActivity
                     if (parent.getChildAdapterPosition(view) >= (list.size() - 1 - lines) &&
                             parent.getChildAdapterPosition(view) <= (list.size() - 1))
                     {
-                        outRect.right = DisplayUtils.dp_to_px(mContext, 5);
+                        outRect.bottom = DisplayUtils.dp_to_px(mContext, 2);
                     }
                 }
                 else
@@ -133,7 +133,7 @@ public class RV_HorizonGrid_Activity extends AppCompatActivity
                     if (parent.getChildAdapterPosition(view) >= (list.size() - list.size() % 4 - 1) &&
                             parent.getChildAdapterPosition(view) <= (list.size() - 1))
                     {
-                        outRect.right = DisplayUtils.dp_to_px(mContext, 5);
+                        outRect.bottom = DisplayUtils.dp_to_px(mContext, 2);
                     }
                 }
             }
@@ -161,7 +161,7 @@ public class RV_HorizonGrid_Activity extends AppCompatActivity
         @Override
         public Viewholder onCreateViewHolder(ViewGroup parent, int viewType)
         {
-            return new Viewholder(LayoutInflater.from(mContext).inflate(R.layout.item_rv_horizongrid, parent, false));
+            return new Viewholder(LayoutInflater.from(mContext).inflate(R.layout.item_rv_grid, parent, false));
         }
 
         @Override
@@ -176,7 +176,7 @@ public class RV_HorizonGrid_Activity extends AppCompatActivity
                 {
                     if (position == 0)
                     {
-                        startActivity(new Intent(mContext, RV_Stagger_Activity.class));
+                        startActivity(new Intent(mContext, RV_HorizonGrid_Activity.class));
                     }
                 }
             });
@@ -224,7 +224,7 @@ public class RV_HorizonGrid_Activity extends AppCompatActivity
 
         public void addItem(int position)
         {
-            list.add(position, "RV_HorizonGrid");
+            list.add(position, "RV_Grid");
             notifyItemInserted(position);
         }
 

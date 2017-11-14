@@ -1,4 +1,4 @@
-package com.hxh.materialdesignviews.fragment;
+package com.hxh.mdv.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.hxh.materialdesignviews.R;
+import com.hxh.mdv.R;
 
 public class SB_Fragment extends Fragment
 {

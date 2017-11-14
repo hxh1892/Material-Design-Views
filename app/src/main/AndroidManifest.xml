@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.hxh.materialdesignviews">
+    package="com.hxh.mdv">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/MainTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.hxh.mdv.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -17,16 +17,16 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Login_Activity"/>
+        <activity android:name="com.hxh.mdv.Login_Activity"/>
 
-        <activity android:name=".recyclerview.RV_Linear_Activity"/>
-        <activity android:name=".recyclerview.RV_Grid_Activity"/>
-        <activity android:name=".recyclerview.RV_HorizonGrid_Activity"/>
-        <activity android:name=".recyclerview.RV_Stagger_Activity"/>
+        <activity android:name="com.hxh.mdv.recyclerview.RV_Linear_Activity"/>
+        <activity android:name="com.hxh.mdv.recyclerview.RV_Grid_Activity"/>
+        <activity android:name="com.hxh.mdv.recyclerview.RV_HorizonGrid_Activity"/>
+        <activity android:name="com.hxh.mdv.recyclerview.RV_Stagger_Activity"/>
 
-        <activity android:name=".recyclerview.RV_RL_Activity"/>
+        <activity android:name="com.hxh.mdv.recyclerview.RV_RL_Activity"/>
 
-        <activity android:name=".Scro_Activity"/>
+        <activity android:name="com.hxh.mdv.Scro_Activity"/>
 
     </application>
 

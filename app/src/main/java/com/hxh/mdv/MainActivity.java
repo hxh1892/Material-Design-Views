@@ -1,4 +1,4 @@
-package com.hxh.materialdesignviews;
+package com.hxh.mdv;
 
 import android.content.Context;
 import android.content.Intent;
@@ -18,16 +18,16 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.hxh.materialdesignviews.fragment.BT_Fragment;
-import com.hxh.materialdesignviews.fragment.CV_Fragment;
-import com.hxh.materialdesignviews.fragment.Dia_Fragment;
-import com.hxh.materialdesignviews.fragment.Edit_Fragment;
-import com.hxh.materialdesignviews.fragment.Prg_Fragment;
-import com.hxh.materialdesignviews.fragment.SB_Fragment;
-import com.hxh.materialdesignviews.fragment.Spi_Fragment;
-import com.hxh.materialdesignviews.fragment.Swi_Fragment;
-import com.hxh.materialdesignviews.recyclerview.RV_Linear_Activity;
-import com.hxh.materialdesignviews.recyclerview.RV_RL_Activity;
+import com.hxh.mdv.fragment.BT_Fragment;
+import com.hxh.mdv.fragment.CV_Fragment;
+import com.hxh.mdv.fragment.Dia_Fragment;
+import com.hxh.mdv.fragment.Edit_Fragment;
+import com.hxh.mdv.fragment.Prg_Fragment;
+import com.hxh.mdv.fragment.SB_Fragment;
+import com.hxh.mdv.fragment.Spi_Fragment;
+import com.hxh.mdv.fragment.Swi_Fragment;
+import com.hxh.mdv.recyclerview.RV_Linear_Activity;
+import com.hxh.mdv.recyclerview.RV_RL_Activity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity
         {
             if (currentTimeMillis() - exitTime > 2000)
             {
-                Toast.makeText(mContext, "再按一次退出程序", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "Click again to quit", Toast.LENGTH_SHORT).show();
 
                 exitTime = currentTimeMillis();
             }

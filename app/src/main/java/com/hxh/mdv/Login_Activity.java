@@ -1,4 +1,4 @@
-package com.hxh.materialdesignviews;
+package com.hxh.mdv;
 
 import android.content.Context;
 import android.os.Bundle;

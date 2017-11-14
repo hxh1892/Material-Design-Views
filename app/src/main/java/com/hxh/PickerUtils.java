@@ -43,10 +43,10 @@ public class PickerUtils
 
     public static void setDatePickerDividerColor(Context context, DatePicker datePicker, int color)
     {
-        // 获取 mSpinners
+        //获取 mSpinners
         LinearLayout llFirst = (LinearLayout) datePicker.getChildAt(0);
 
-        // 获取 NumberPicker
+        //获取 NumberPicker
         LinearLayout llFirstFirst = (LinearLayout) llFirst.getChildAt(0);
 
         for (int i = 0; i < llFirstFirst.getChildCount(); i++)
@@ -78,10 +78,10 @@ public class PickerUtils
 
     public static void setTimePickerDividerColor(Context context, TimePicker timePicker, int color)
     {
-        // 获取 mSpinners
+        //获取 mSpinners
         LinearLayout llFirst = (LinearLayout) timePicker.getChildAt(0);
 
-        // 获取 NumberPicker
+        //获取 NumberPicker
         LinearLayout llFirstFirst = (LinearLayout) llFirst.getChildAt(0);
 
         for (int i = 0; i < llFirstFirst.getChildCount(); i++)

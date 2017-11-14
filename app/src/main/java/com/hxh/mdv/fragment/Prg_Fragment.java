@@ -1,4 +1,4 @@
-package com.hxh.materialdesignviews.fragment;
+package com.hxh.mdv.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
-import com.hxh.materialdesignviews.R;
+import com.hxh.mdv.R;
 
 public class Prg_Fragment extends Fragment
 {

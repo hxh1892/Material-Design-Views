@@ -1,4 +1,4 @@
-package com.hxh.materialdesignviews.fragment;
+package com.hxh.mdv.fragment;
 
 import android.animation.ObjectAnimator;
 import android.content.Context;
@@ -19,10 +19,10 @@ import android.view.animation.AccelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 
-import com.hxh.materialdesignviews.R;
-import com.hxh.materialdesignviews.Scro_Activity;
-import com.hxh.materialdesignviews.recyclerview.RV_Linear_Activity;
-import com.hxh.materialdesignviews.recyclerview.RV_RL_Activity;
+import com.hxh.mdv.R;
+import com.hxh.mdv.Scro_Activity;
+import com.hxh.mdv.recyclerview.RV_Linear_Activity;
+import com.hxh.mdv.recyclerview.RV_RL_Activity;
 
 import java.util.List;
 

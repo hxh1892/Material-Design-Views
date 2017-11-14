@@ -1,4 +1,4 @@
-package com.hxh.materialdesignviews.fragment;
+package com.hxh.mdv.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 
-import com.hxh.materialdesignviews.R;
+import com.hxh.mdv.R;
 
 public class Edit_Fragment extends Fragment implements View.OnClickListener
 {

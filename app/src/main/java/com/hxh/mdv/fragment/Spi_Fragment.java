@@ -1,4 +1,4 @@
-package com.hxh.materialdesignviews.fragment;
+package com.hxh.mdv.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -11,9 +11,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.hxh.materialdesignviews.R;
+import com.hxh.mdv.R;
 
-import static com.hxh.materialdesignviews.R.array.languages;
+import static com.hxh.mdv.R.array.languages;
 
 public class Spi_Fragment extends Fragment
 {

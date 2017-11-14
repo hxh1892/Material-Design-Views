@@ -1,4 +1,4 @@
-package com.hxh.materialdesignviews.recyclerview;
+package com.hxh.mdv.recyclerview;
 
 import android.animation.ObjectAnimator;
 import android.content.Context;
@@ -7,7 +7,7 @@ import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
-import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
@@ -19,12 +19,12 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.TextView;
 
 import com.hxh.DisplayUtils;
-import com.hxh.materialdesignviews.R;
+import com.hxh.mdv.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RV_Grid_Activity extends AppCompatActivity
+public class RV_Linear_Activity extends AppCompatActivity
 {
     Context mContext = this;
 
@@ -33,10 +33,8 @@ public class RV_Grid_Activity extends AppCompatActivity
     RecyclerViewAdapter adapter = new RecyclerViewAdapter();
     List<String> list = new ArrayList<>();
 
-    int lines = 4;
-
     {
-        list.add("Click this view to goto RV_HorizonGrid_Activity");
+        list.add("Click this view to goto RV_Stagger_Activity");
 
         for (int i = 'A'; i <= 'Z'; i++)
         {
@@ -78,7 +76,7 @@ public class RV_Grid_Activity extends AppCompatActivity
     {
         tb = (Toolbar) findViewById(R.id.tb);
 
-        tb.setTitle("RecyclerView Grid");
+        tb.setTitle("RecyclerView Linear");
 
         setSupportActionBar(tb);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -97,7 +95,7 @@ public class RV_Grid_Activity extends AppCompatActivity
     {
         rv = (RecyclerView) findViewById(R.id.rv);
 
-        rv.setLayoutManager(new GridLayoutManager(mContext, lines));
+        rv.setLayoutManager(new LinearLayoutManager(mContext));
 
         rv.addItemDecoration(new RecyclerView.ItemDecoration()
         {
@@ -106,35 +104,16 @@ public class RV_Grid_Activity extends AppCompatActivity
             {
                 super.getItemOffsets(outRect, view, parent, state);
 
-                if (parent.getChildAdapterPosition(view) <= (lines - 1))
+                outRect.right = DisplayUtils.dp_to_px(mContext, 5);
+                outRect.left = DisplayUtils.dp_to_px(mContext, 5);
+
+                if (parent.getChildAdapterPosition(view) == 0)
                 {
                     outRect.top = DisplayUtils.dp_to_px(mContext, 8);
                 }
-
-                if ((parent.getChildAdapterPosition(view) + 1) % lines == 0)
+                else if (parent.getChildAdapterPosition(view) == (list.size() - 1))
                 {
-                    outRect.right = DisplayUtils.dp_to_px(mContext, 5);
-                }
-                else if ((parent.getChildAdapterPosition(view)) % lines == 0)
-                {
-                    outRect.left = DisplayUtils.dp_to_px(mContext, 5);
-                }
-
-                if (list.size() % 4 == 0)
-                {
-                    if (parent.getChildAdapterPosition(view) >= (list.size() - 1 - lines) &&
-                            parent.getChildAdapterPosition(view) <= (list.size() - 1))
-                    {
-                        outRect.bottom = DisplayUtils.dp_to_px(mContext, 2);
-                    }
-                }
-                else
-                {
-                    if (parent.getChildAdapterPosition(view) >= (list.size() - list.size() % 4 - 1) &&
-                            parent.getChildAdapterPosition(view) <= (list.size() - 1))
-                    {
-                        outRect.bottom = DisplayUtils.dp_to_px(mContext, 2);
-                    }
+                    outRect.bottom = DisplayUtils.dp_to_px(mContext, 2);
                 }
             }
         });
@@ -153,7 +132,7 @@ public class RV_Grid_Activity extends AppCompatActivity
             {
                 super(view);
 
-                cv = (CardView) view.findViewById(R.id.cv);
+                cv= (CardView) view.findViewById(R.id.cv);
                 tv = (TextView) view.findViewById(R.id.tv);
             }
         }
@@ -161,7 +140,7 @@ public class RV_Grid_Activity extends AppCompatActivity
         @Override
         public Viewholder onCreateViewHolder(ViewGroup parent, int viewType)
         {
-            return new Viewholder(LayoutInflater.from(mContext).inflate(R.layout.item_rv_grid, parent, false));
+            return new Viewholder(LayoutInflater.from(mContext).inflate(R.layout.item_rv_linear, parent, false));
         }
 
         @Override
@@ -174,9 +153,9 @@ public class RV_Grid_Activity extends AppCompatActivity
                 @Override
                 public void onClick(View v)
                 {
-                    if (position == 0)
+                    if(position==0)
                     {
-                        startActivity(new Intent(mContext, RV_HorizonGrid_Activity.class));
+                        startActivity(new Intent(mContext, RV_Grid_Activity.class));
                     }
                 }
             });
@@ -224,7 +203,7 @@ public class RV_Grid_Activity extends AppCompatActivity
 
         public void addItem(int position)
         {
-            list.add(position, "RV_Grid");
+            list.add(position, "RV_Linear");
             notifyItemInserted(position);
         }
 
