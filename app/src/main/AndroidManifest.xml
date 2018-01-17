@@ -17,16 +17,16 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.hxh.mdv.Login_Activity"/>
+        <activity android:name=".Login_Activity"/>
 
-        <activity android:name="com.hxh.mdv.recyclerview.RV_Linear_Activity"/>
-        <activity android:name="com.hxh.mdv.recyclerview.RV_Grid_Activity"/>
-        <activity android:name="com.hxh.mdv.recyclerview.RV_HorizonGrid_Activity"/>
-        <activity android:name="com.hxh.mdv.recyclerview.RV_Stagger_Activity"/>
+        <activity android:name=".recyclerview.RV_Linear_Activity"/>
+        <activity android:name=".recyclerview.RV_Grid_Activity"/>
+        <activity android:name=".recyclerview.RV_HorizonGrid_Activity"/>
+        <activity android:name=".recyclerview.RV_Stagger_Activity"/>
 
-        <activity android:name="com.hxh.mdv.recyclerview.RV_RL_Activity"/>
+        <activity android:name=".recyclerview.RV_RL_Activity"/>
 
-        <activity android:name="com.hxh.mdv.Scro_Activity"/>
+        <activity android:name=".Scro_Activity"/>
 
     </application>
 
