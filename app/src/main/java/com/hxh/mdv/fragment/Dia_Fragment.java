@@ -45,9 +45,9 @@ import static com.hxh.mdv.R.id.set;
 
 public class Dia_Fragment extends Fragment implements View.OnClickListener
 {
-    Context mContext;
+    private Context mContext;
 
-    Button bt_ad1, bt_ad2, bt_ad3, bt_ad_list, bt_ad_sc, bt_ad_mc, bt_ad_et, bt_pd1, bt_pd2, bt_fsd, bt_dpd, bt_tpd, bt_npd, bt_bsd, bt_sb, bt_pm;
+    private Button bt_ad1, bt_ad2, bt_ad3, bt_ad_list, bt_ad_sc, bt_ad_mc, bt_ad_et, bt_pd1, bt_pd2, bt_fsd1, bt_fsd2, bt_fsd3, bt_dpd, bt_tpd, bt_npd, bt_bsd, bt_sb, bt_pm;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -120,9 +120,21 @@ public class Dia_Fragment extends Fragment implements View.OnClickListener
 
                 break;
             }
-            case R.id.bt_fsd:
+            case R.id.bt_fsd1:
             {
-                showFullScreenDialog();
+                showFullScreenDialog1();
+
+                break;
+            }
+            case R.id.bt_fsd2:
+            {
+                showFullScreenDialog2();
+
+                break;
+            }
+            case R.id.bt_fsd3:
+            {
+                showFullScreenDialog3();
 
                 break;
             }
@@ -177,7 +189,9 @@ public class Dia_Fragment extends Fragment implements View.OnClickListener
         bt_ad_et = (Button) view.findViewById(R.id.bt_ad_et);
         bt_pd1 = (Button) view.findViewById(R.id.bt_pd1);
         bt_pd2 = (Button) view.findViewById(R.id.bt_pd2);
-        bt_fsd = (Button) view.findViewById(R.id.bt_fsd);
+        bt_fsd1 = (Button) view.findViewById(R.id.bt_fsd1);
+        bt_fsd2 = (Button) view.findViewById(R.id.bt_fsd2);
+        bt_fsd3 = (Button) view.findViewById(R.id.bt_fsd3);
         bt_dpd = (Button) view.findViewById(R.id.bt_dpd);
         bt_tpd = (Button) view.findViewById(R.id.bt_tpd);
         bt_npd = (Button) view.findViewById(R.id.bt_npd);
@@ -194,7 +208,9 @@ public class Dia_Fragment extends Fragment implements View.OnClickListener
         bt_ad_et.setOnClickListener(this);
         bt_pd1.setOnClickListener(this);
         bt_pd2.setOnClickListener(this);
-        bt_fsd.setOnClickListener(this);
+        bt_fsd1.setOnClickListener(this);
+        bt_fsd2.setOnClickListener(this);
+        bt_fsd3.setOnClickListener(this);
         bt_dpd.setOnClickListener(this);
         bt_tpd.setOnClickListener(this);
         bt_npd.setOnClickListener(this);
@@ -434,10 +450,10 @@ public class Dia_Fragment extends Fragment implements View.OnClickListener
         }).start();
     }
 
-    private void showFullScreenDialog()
+    private void showFullScreenDialog1()
     {
-        final Dialog fullscreenDialog = new Dialog(mContext, R.style.FullscreenDialogTheme);
-        fullscreenDialog.setContentView(R.layout.dia_fsd);
+        final Dialog fullscreenDialog = new Dialog(mContext, R.style.FullscreenDialogTheme1);
+        fullscreenDialog.setContentView(R.layout.dia_fsd1);
 
         ImageView iv_close = (ImageView) fullscreenDialog.findViewById(R.id.dia_fsd_iv_close);
         ImageView iv_main = (ImageView) fullscreenDialog.findViewById(R.id.dia_fsd_iv_main);
@@ -449,6 +465,75 @@ public class Dia_Fragment extends Fragment implements View.OnClickListener
             @Override
             public void onClick(View v)
             {
+                fullscreenDialog.dismiss();
+            }
+        });
+
+        fullscreenDialog.show();
+    }
+
+    private void showFullScreenDialog2()
+    {
+        final Dialog fullscreenDialog = new Dialog(mContext, R.style.FullscreenDialogTheme2);
+        fullscreenDialog.setContentView(R.layout.dia_fsd2);
+
+        fullscreenDialog.findViewById(R.id.tv_cam).setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Toast.makeText(mContext, "Camera", Toast.LENGTH_SHORT).show();
+
+                fullscreenDialog.dismiss();
+            }
+        });
+
+        fullscreenDialog.findViewById(R.id.tv_alm).setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Toast.makeText(mContext, "Album", Toast.LENGTH_SHORT).show();
+
+                fullscreenDialog.dismiss();
+            }
+        });
+
+        fullscreenDialog.show();
+    }
+
+    private void showFullScreenDialog3()
+    {
+        final Dialog fullscreenDialog = new Dialog(mContext, R.style.FullscreenDialogTheme3);
+        fullscreenDialog.setContentView(R.layout.dia_fsd3);
+
+        fullscreenDialog.findViewById(R.id.rl).setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                fullscreenDialog.dismiss();
+            }
+        });
+
+        fullscreenDialog.findViewById(R.id.tv_cam).setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Toast.makeText(mContext, "Camera", Toast.LENGTH_SHORT).show();
+
+                fullscreenDialog.dismiss();
+            }
+        });
+
+        fullscreenDialog.findViewById(R.id.tv_alm).setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Toast.makeText(mContext, "Album", Toast.LENGTH_SHORT).show();
+
                 fullscreenDialog.dismiss();
             }
         });
@@ -500,20 +585,20 @@ public class Dia_Fragment extends Fragment implements View.OnClickListener
         setTimePickerDialogNegativeButtonColor(mContext, timePickerDialog, R.color.colorAccent);
     }
 
-    int num = 0;
-    String City, Province;
-    String[] province = {};
+    private int num = 0;
+    private String City, Province;
+    private String[] province = {};
 
-    final Map<String, String[]> adress = new HashMap<>();
+    private final Map<String, String[]> adress = new HashMap<>();
 
-    final String[] city = {"北京", "天津", "上海", "南京", "深圳", "广州"};
+    private final String[] city = {"北京", "天津", "上海", "南京", "深圳", "广州"};
 
-    String[] province1 = {"朝阳区", "丰台区", "西城区", "海淀区", "通州区", "房山区"};
-    String[] province2 = {"和平区", "河东区", "津南区", "南开区", "西青区", "红桥区"};
-    String[] province3 = {"虹桥区", "徐汇区", "虹口区", "浦东新区", "长宁区", "闵行区"};
-    String[] province4 = {"鼓楼区", "秦淮区", "玄武区", "建邺区", "栖霞区", "江宁区"};
-    String[] province5 = {"盐田区", "罗湖区", "福田区", "南山区", "宝安区", "大鹏新区"};
-    String[] province6 = {"白云区", "海珠区", "天河区", "黄浦区", "番禺区", "花都区"};
+    private String[] province1 = {"朝阳区", "丰台区", "西城区", "海淀区", "通州区", "房山区"};
+    private String[] province2 = {"和平区", "河东区", "津南区", "南开区", "西青区", "红桥区"};
+    private String[] province3 = {"虹桥区", "徐汇区", "虹口区", "浦东新区", "长宁区", "闵行区"};
+    private String[] province4 = {"鼓楼区", "秦淮区", "玄武区", "建邺区", "栖霞区", "江宁区"};
+    private String[] province5 = {"盐田区", "罗湖区", "福田区", "南山区", "宝安区", "大鹏新区"};
+    private String[] province6 = {"白云区", "海珠区", "天河区", "黄浦区", "番禺区", "花都区"};
 
     {
         adress.put("北京", province1);

@@ -90,12 +90,30 @@
             android:textAllCaps="false"/>
 
         <Button
-            android:id="@+id/bt_fsd"
+            android:id="@+id/bt_fsd1"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_margin="10dp"
-            android:text="full screen Dialog"
+            android:text="full screen Dialog1"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bt_fsd2"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:text="full screen Dialog2"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bt_fsd3"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:text="full screen Dialog3"
             android:textAllCaps="false"/>
 
         <Button

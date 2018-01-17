@@ -28,12 +28,12 @@ import java.util.List;
 
 public class CV_Fragment extends Fragment implements View.OnClickListener, View.OnTouchListener
 {
-    Context mContext;
+    private Context mContext;
 
-    CardView cv1, cv2, cv3;
-    ImageView iv1, iv2, iv3, iv4;
+    private CardView cv1, cv2, cv3;
+    private ImageView iv1, iv2, iv3, iv4;
 
-    boolean isIv1 = false, isIv2 = false;
+    private boolean isIv1 = false, isIv2 = false;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)

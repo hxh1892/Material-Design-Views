@@ -11,8 +11,8 @@ import com.hxh.mdv.R;
 
 public class BT_Fragment extends Fragment
 {
-    FloatingActionButton fabt1;
-    FloatingActionButton fabt2;
+    private FloatingActionButton fabt1;
+    private FloatingActionButton fabt2;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)

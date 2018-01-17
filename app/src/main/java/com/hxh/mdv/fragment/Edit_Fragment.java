@@ -14,10 +14,10 @@ import com.hxh.mdv.R;
 
 public class Edit_Fragment extends Fragment implements View.OnClickListener
 {
-    Context mContext;
+    private Context mContext;
 
-    AutoCompleteTextView actv;
-    EditText et1, et2, et3;
+    private AutoCompleteTextView actv;
+    private EditText et1, et2, et3;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)

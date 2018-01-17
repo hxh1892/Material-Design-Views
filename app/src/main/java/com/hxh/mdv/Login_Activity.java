@@ -13,11 +13,11 @@ import android.widget.Toast;
 
 public class Login_Activity extends AppCompatActivity
 {
-    Context mContext = this;
+    private Context mContext = this;
 
-    Toolbar tb;
-    TextInputLayout til1, til2;
-    EditText et1, et2;
+    private Toolbar tb;
+    private TextInputLayout til1, til2;
+    private EditText et1, et2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)

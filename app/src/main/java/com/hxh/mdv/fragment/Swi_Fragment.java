@@ -14,9 +14,9 @@ import com.hxh.mdv.R;
 
 public class Swi_Fragment extends Fragment
 {
-    Context mContext;
+    private Context mContext;
 
-    SwitchCompat sc;
+    private SwitchCompat sc;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)

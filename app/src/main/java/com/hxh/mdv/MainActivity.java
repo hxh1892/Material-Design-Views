@@ -36,17 +36,17 @@ import static java.lang.System.currentTimeMillis;
 
 public class MainActivity extends AppCompatActivity
 {
-    Context mContext = this;
+    private Context mContext = this;
 
-    DrawerLayout dl;
-    LinearLayout ll_left;
-    RelativeLayout rl_right;
-    Toolbar tb;
-    TabLayout tl;
-    ViewPager vp;
+    private DrawerLayout dl;
+    private LinearLayout ll_left;
+    private RelativeLayout rl_right;
+    private Toolbar tb;
+    private TabLayout tl;
+    private ViewPager vp;
 
-    List<String> list_title = new ArrayList<>();
-    List<Fragment> list_fragment = new ArrayList<>();
+    private List<String> list_title = new ArrayList<>();
+    private List<Fragment> list_fragment = new ArrayList<>();
 
     {
         list_title.add("CardViews");
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity
         Edit_Fragment fragment4 = new Edit_Fragment();
         Dia_Fragment fragment5 = new Dia_Fragment();
         Prg_Fragment fragment6 = new Prg_Fragment();
-        SB_Fragment fragment7=new SB_Fragment();
+        SB_Fragment fragment7 = new SB_Fragment();
         Spi_Fragment fragment8 = new Spi_Fragment();
 
         list_fragment.add(fragment1);

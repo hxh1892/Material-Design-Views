@@ -17,9 +17,9 @@ import static com.hxh.mdv.R.array.languages;
 
 public class Spi_Fragment extends Fragment
 {
-    Context mContext;
+    private Context mContext;
 
-    Spinner spi1, spi2, spi3;
+    private Spinner spi1, spi2, spi3;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)

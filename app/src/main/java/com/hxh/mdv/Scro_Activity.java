@@ -15,10 +15,10 @@ import java.util.List;
 
 public class Scro_Activity extends AppCompatActivity
 {
-    Context mContext = this;
+    private Context mContext = this;
 
-    CollapsingToolbarLayout ctl;
-    Toolbar tb;
+    private CollapsingToolbarLayout ctl;
+    private Toolbar tb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)

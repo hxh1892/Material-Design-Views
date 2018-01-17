@@ -8,7 +8,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 25
         versionCode 3
-        versionName "2.1.0"
+        versionName "2.1.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -52,3 +52,8 @@ dependencies {
 //4.新增BottomSheetDialog展示；
 //5.新增Snackbar展示；
 //6.优化RecyclerView边距显示效果；
+
+//versionCode 4
+//versionName "2.1.1"
+//1.新增FullScreenDialog另外两种效果；
+

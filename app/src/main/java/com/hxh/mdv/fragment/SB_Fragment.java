@@ -14,10 +14,10 @@ import com.hxh.mdv.R;
 
 public class SB_Fragment extends Fragment
 {
-    Context mContext;
+    private Context mContext;
 
-    CardView cv;
-    TextView tv;
+    private CardView cv;
+    private TextView tv;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)

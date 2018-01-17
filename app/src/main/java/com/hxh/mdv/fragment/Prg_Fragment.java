@@ -11,7 +11,7 @@ import com.hxh.mdv.R;
 
 public class Prg_Fragment extends Fragment
 {
-    ProgressBar pb;
+    private ProgressBar pb;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
