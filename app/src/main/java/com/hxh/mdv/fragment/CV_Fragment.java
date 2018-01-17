@@ -176,7 +176,7 @@ public class CV_Fragment extends Fragment implements View.OnClickListener, View.
 
         for (PackageInfo packageInfo : list_packageInfo)
         {
-            if (packageInfo.packageName.equals("com.hxh.materialdesignviews"))
+            if (packageInfo.packageName.equals("com.hxh.mdv"))
             {
                 apkFile = packageInfo.applicationInfo.sourceDir;
             }
