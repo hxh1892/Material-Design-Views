@@ -37,9 +37,11 @@
                 app:tabMode="scrollable"
                 app:tabSelectedTextColor="@color/white"
                 app:tabTextAppearance="@style/TabLayoutTextStyle"
-                app:tabTextColor="@color/gray_text"
-                />
+                app:tabTextColor="@color/gray_text"/>
 
+            <!--去除指示条高度-->
+            <!--app:tabIndicatorHeight="0dp"-->
+            <!--同时设置后将不会有点击阴影效果-->
             <!--app:tabIndicatorColor="@color/white"-->
             <!--app:tabBackground="@color/colorPrimary"-->
 

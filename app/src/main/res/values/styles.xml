@@ -108,9 +108,11 @@
     <!--TabLayoutText Theme-->
     <style name="TabLayoutTextStyle" parent="TextAppearance.Design.Tab">
         <!--Text Size-->
-        <!--<item name="android:textSize">@dimen/text_size_12sp</item>-->
+        <item name="android:textSize">12sp</item>
         <!--Small Letter-->
         <item name="textAllCaps">false</item>
+        <!--Text Style-->
+        <item name="android:textStyle">italic</item>
     </style>
 
     <!--TextInputLayout Theme-->
