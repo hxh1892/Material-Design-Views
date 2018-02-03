@@ -20,16 +20,16 @@ import java.util.List;
 
 public class RV_RL_Activity extends AppCompatActivity
 {
-    Context mContext = this;
+    private Context mContext = this;
 
-    Toolbar tb;
-    SwipeRefreshLayout srl;
-    RecyclerView rv;
-    ProgressBar pb;
+    private Toolbar tb;
+    private SwipeRefreshLayout srl;
+    private RecyclerView rv;
+    private ProgressBar pb;
 
-    boolean canLoad = true;
+    private boolean canLoad = true;
 
-    List<String> list = new ArrayList<>();
+    private List<String> list = new ArrayList<>();
 
     {
         list.add("This is line:\n11111");
@@ -49,7 +49,7 @@ public class RV_RL_Activity extends AppCompatActivity
         list.add("This is line:\n1515151515");
     }
 
-    RVAdapter adapter;
+    private RVAdapter adapter;
 
     @Override
     public void onCreate(Bundle savedInstanceState)

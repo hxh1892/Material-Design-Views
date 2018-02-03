@@ -26,14 +26,14 @@ import java.util.List;
 
 public class RV_Stagger_Activity extends AppCompatActivity
 {
-    Context mContext = this;
+    private Context mContext = this;
 
-    Toolbar tb;
-    RecyclerView rv;
-    RecyclerViewAdapter adapter = new RecyclerViewAdapter();
-    List<String> list = new ArrayList<>();
+    private Toolbar tb;
+    private RecyclerView rv;
+    private RecyclerViewAdapter adapter = new RecyclerViewAdapter();
+    private List<String> list = new ArrayList<>();
 
-    int lines = 4;
+    private int lines = 4;
 
     {
         for (int i = 'A'; i <= 'Z'; i++)
@@ -140,14 +140,14 @@ public class RV_Stagger_Activity extends AppCompatActivity
         rv.setAdapter(adapter);
     }
 
-    class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.Viewholder>
+    private class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     {
-        class Viewholder extends RecyclerView.ViewHolder
+        private class Viewholder extends RecyclerView.ViewHolder
         {
-            CardView cv;
-            TextView tv;
+            private CardView cv;
+            private TextView tv;
 
-            public Viewholder(View view)
+            private Viewholder(View view)
             {
                 super(view);
 
@@ -157,24 +157,24 @@ public class RV_Stagger_Activity extends AppCompatActivity
         }
 
         @Override
-        public Viewholder onCreateViewHolder(ViewGroup parent, int viewType)
+        public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
         {
             return new Viewholder(LayoutInflater.from(mContext).inflate(R.layout.item_rv_stagger, parent, false));
         }
 
         @Override
-        public void onBindViewHolder(Viewholder holder, final int position)
+        public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position)
         {
-            ViewGroup.LayoutParams params = holder.cv.getLayoutParams();
+            ViewGroup.LayoutParams params = ((Viewholder) holder).cv.getLayoutParams();
 
             //把随机的高度赋予item布局
             params.height = (int) (300 + Math.random() * 300);
             //把params设置item布局
-            holder.cv.setLayoutParams(params);
+            ((Viewholder) holder).cv.setLayoutParams(params);
 
-            holder.tv.setText(list.get(position) + "");
+            ((Viewholder) holder).tv.setText(list.get(position) + "");
 
-            holder.cv.setOnClickListener(new View.OnClickListener()
+            ((Viewholder) holder).cv.setOnClickListener(new View.OnClickListener()
             {
                 @Override
                 public void onClick(View v)
@@ -183,7 +183,7 @@ public class RV_Stagger_Activity extends AppCompatActivity
                 }
             });
 
-            holder.cv.setOnTouchListener(new View.OnTouchListener()
+            ((Viewholder) holder).cv.setOnTouchListener(new View.OnTouchListener()
             {
                 @Override
                 public boolean onTouch(View view, MotionEvent event)

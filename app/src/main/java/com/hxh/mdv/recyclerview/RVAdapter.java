@@ -25,8 +25,8 @@ public class RVAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     private boolean showFooter = true;
 
-    Context mContext;
-    List<String> list = new ArrayList<>();
+    private Context mContext;
+    private List<String> list = new ArrayList<>();
 
     public RVAdapter(Context context, List<String> list)
     {
@@ -34,21 +34,21 @@ public class RVAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         this.list = list;
     }
 
-    public class FooterViewHolder extends RecyclerView.ViewHolder
+    private class FooterViewHolder extends RecyclerView.ViewHolder
     {
-        public FooterViewHolder(View view)
+        private FooterViewHolder(View view)
         {
             super(view);
         }
     }
 
-    public class DefaultViewHolder extends RecyclerView.ViewHolder
+    private class DefaultViewHolder extends RecyclerView.ViewHolder
     {
-        CardView cv;
-        ImageView iv;
-        TextView tv;
+        private CardView cv;
+        private ImageView iv;
+        private TextView tv;
 
-        public DefaultViewHolder(View view)
+        private DefaultViewHolder(View view)
         {
             super(view);
 

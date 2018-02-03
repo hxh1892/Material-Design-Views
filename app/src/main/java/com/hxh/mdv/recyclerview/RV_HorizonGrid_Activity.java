@@ -26,12 +26,12 @@ import java.util.List;
 
 public class RV_HorizonGrid_Activity extends AppCompatActivity
 {
-    Context mContext = this;
+    private Context mContext = this;
 
-    Toolbar tb;
-    RecyclerView rv;
-    RecyclerViewAdapter adapter = new RecyclerViewAdapter();
-    List<String> list = new ArrayList<>();
+    private Toolbar tb;
+    private RecyclerView rv;
+    private RecyclerViewAdapter adapter = new RecyclerViewAdapter();
+    private List<String> list = new ArrayList<>();
 
     int lines = 4;
 
@@ -142,14 +142,14 @@ public class RV_HorizonGrid_Activity extends AppCompatActivity
         rv.setAdapter(adapter);
     }
 
-    class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.Viewholder>
+    private class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     {
-        class Viewholder extends RecyclerView.ViewHolder
+        private class Viewholder extends RecyclerView.ViewHolder
         {
-            CardView cv;
-            TextView tv;
+            private CardView cv;
+            private TextView tv;
 
-            public Viewholder(View view)
+            private Viewholder(View view)
             {
                 super(view);
 
@@ -159,17 +159,17 @@ public class RV_HorizonGrid_Activity extends AppCompatActivity
         }
 
         @Override
-        public Viewholder onCreateViewHolder(ViewGroup parent, int viewType)
+        public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
         {
             return new Viewholder(LayoutInflater.from(mContext).inflate(R.layout.item_rv_horizongrid, parent, false));
         }
 
         @Override
-        public void onBindViewHolder(Viewholder holder, final int position)
+        public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position)
         {
-            holder.tv.setText(list.get(position) + "");
+            ((Viewholder) holder).tv.setText(list.get(position) + "");
 
-            holder.cv.setOnClickListener(new View.OnClickListener()
+            ((Viewholder) holder).cv.setOnClickListener(new View.OnClickListener()
             {
                 @Override
                 public void onClick(View v)
@@ -181,7 +181,7 @@ public class RV_HorizonGrid_Activity extends AppCompatActivity
                 }
             });
 
-            holder.cv.setOnTouchListener(new View.OnTouchListener()
+            ((Viewholder) holder).cv.setOnTouchListener(new View.OnTouchListener()
             {
                 @Override
                 public boolean onTouch(View view, MotionEvent event)
