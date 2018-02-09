@@ -16,6 +16,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:hint="This text size is 15sp"
+            android:inputType="text"
+            android:maxLines="1"
             android:textColor="@color/black_333"
             android:textSize="15sp"
             android:theme="@style/EditTextTheme1"/>
@@ -26,6 +28,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:hint="This text size is 20sp"
+            android:inputType="text"
+            android:maxLines="1"
             android:textColor="@color/black_333"
             android:textSize="20sp"
             android:theme="@style/EditTextTheme2"/>
@@ -36,6 +40,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:hint="This text size is 25sp"
+            android:inputType="text"
+            android:maxLines="1"
             android:textColor="@color/black_333"
             android:textSize="25sp"
             android:theme="@style/EditTextTheme3"/>
@@ -74,7 +80,6 @@
                 android:layout_height="wrap_content"
                 android:hint="Input your password"
                 android:inputType="textPassword"
-                android:maxLength="11"
                 android:maxLines="1"
                 android:textColor="@color/black_333"
                 android:textSize="15sp"/>
@@ -94,6 +99,7 @@
                 android:completionThreshold="3"
                 android:ellipsize="end"
                 android:hint="Please input 'airbus'"
+                android:inputType="text"
                 android:maxLines="1"/>
 
         </android.support.design.widget.TextInputLayout>

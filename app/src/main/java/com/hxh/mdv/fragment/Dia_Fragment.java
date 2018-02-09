@@ -386,6 +386,7 @@ public class Dia_Fragment extends Fragment implements View.OnClickListener
     {
         final EditText et = new EditText(mContext);
         et.setHint("Input your text");
+        et.setMaxLines(1);
 
         new AlertDialog.Builder(mContext).
                 setIcon(R.mipmap.ic_icon).

@@ -66,13 +66,20 @@ public class Login_Activity extends AppCompatActivity
 
     public void close(View v)
     {
-        View view = getCurrentFocus();
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 
-        if (view != null)
+        if (imm != null)
         {
-            ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE)).
-                    hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+            imm.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
         }
+
+//        View view = getCurrentFocus();
+//
+//        if (view != null)
+//        {
+//            ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE)).
+//                    hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+//        }
     }
 
     private void initToolbar()
