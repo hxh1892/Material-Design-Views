@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -62,24 +61,6 @@ public class Login_Activity extends AppCompatActivity
                 }
             }
         }
-    }
-
-    public void close(View v)
-    {
-        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-
-        if (imm != null)
-        {
-            imm.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-        }
-
-//        View view = getCurrentFocus();
-//
-//        if (view != null)
-//        {
-//            ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE)).
-//                    hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-//        }
     }
 
     private void initToolbar()

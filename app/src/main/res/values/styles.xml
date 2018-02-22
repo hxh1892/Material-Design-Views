@@ -9,7 +9,7 @@
     </style>
 
     <!--FullscreenDialog Theme-->
-    <style name="FullscreenDialogTheme1" parent="@android:style/Theme.Material.Light.DialogWhenLarge">
+    <style name="FullscreenDialogTheme" parent="@android:style/Theme.Material.Light.DialogWhenLarge">
         <!--状态栏颜色-->
         <item name="android:statusBarColor">@color/colorPrimaryDark</item>
 
@@ -20,8 +20,8 @@
         <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
     </style>
 
-    <!--FullscreenDialog Theme-->
-    <style name="FullscreenDialogTheme2" parent="@android:style/Theme.Material.Light.DialogWhenLarge">
+    <!--FullscreenDialog_Center Theme-->
+    <style name="FullscreenDialogTheme_Center" parent="@android:style/Theme.Material.Light.DialogWhenLarge">
         <!--状态栏颜色-->
         <item name="android:statusBarColor">@android:color/transparent</item>
 
@@ -51,8 +51,8 @@
         <item name="android:windowCloseOnTouchOutside">true</item>
     </style>
 
-    <!--FullscreenDialog Theme-->
-    <style name="FullscreenDialogTheme3" parent="@android:style/Theme.Material.Light.DialogWhenLarge">
+    <!--FullscreenDialog_Bottom Theme-->
+    <style name="FullscreenDialogTheme_Bottom" parent="@android:style/Theme.Material.Light.DialogWhenLarge">
         <!--状态栏颜色-->
         <item name="android:statusBarColor">@android:color/transparent</item>
 
@@ -60,7 +60,7 @@
         <item name="android:windowNoTitle">true</item>
 
         <!--出入动画-->
-        <item name="android:windowAnimationStyle">@style/DialogAnim</item>
+        <item name="android:windowAnimationStyle">@style/DialogAnim_Bottom</item>
 
         <!--是否有背景-->
         <item name="android:windowNoDisplay">true</item>
@@ -72,8 +72,8 @@
         <item name="android:windowBackground">@android:color/transparent</item>
     </style>
 
-    <!--FullscreenDialog anim-->
-    <style name="DialogAnim" parent="@android:style/Animation">
+    <!--FullscreenDialogTheme_Bottom anim-->
+    <style name="DialogAnim_Bottom" parent="@android:style/Animation">
         <item name="android:windowEnterAnimation">@anim/in_bottom_to_top</item>
         <item name="android:windowExitAnimation">@anim/out_top_to_bottom</item>
     </style>
@@ -83,35 +83,35 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <!--Back Back Icon Color-->
+        <!--返回按钮颜色-->
         <item name="android:colorControlNormal">@color/white</item>
-        <!--Title Color-->
+        <!--标题颜色-->
         <item name="android:textColorPrimary">@color/black</item>
 
-        <!--Toolbar Menu Icon Color-->
+        <!--菜单栏颜色-->
         <item name="android:textColorSecondary">@color/white</item>
     </style>
 
     <!--Toolbar Menu Theme-->
     <style name="ToolbarPopupTheme" parent="@style/ThemeOverlay.AppCompat.Light">
-        <!--Toolbar Menu Background Color-->
+        <!--菜单按钮颜色-->
         <item name="android:colorBackground">@color/white</item>
-        <!--New One Item Set Menu Down-->
+        <!--菜单下移一格设置-->
         <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle</item>
     </style>
 
     <style name="OverflowMenuStyle" parent="Widget.AppCompat.Light.PopupMenu.Overflow">
-        <!--false:Set Menu Down Toolbar-->
+        <!--false:菜单下移一格-->
         <item name="overlapAnchor">false</item>
     </style>
 
     <!--TabLayoutText Theme-->
     <style name="TabLayoutTextStyle" parent="TextAppearance.Design.Tab">
-        <!--Text Size-->
+        <!--文字大小-->
         <item name="android:textSize">12sp</item>
-        <!--Small Letter-->
+        <!--文字小写-->
         <item name="textAllCaps">false</item>
-        <!--Text Style-->
+        <!--文字样式-->
         <item name="android:textStyle">italic</item>
     </style>
 

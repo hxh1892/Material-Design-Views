@@ -453,11 +453,11 @@ public class Dia_Fragment extends Fragment implements View.OnClickListener
 
     private void showFullScreenDialog1()
     {
-        final Dialog fullscreenDialog = new Dialog(mContext, R.style.FullscreenDialogTheme1);
-        fullscreenDialog.setContentView(R.layout.dia_fsd1);
+        final Dialog dialog = new Dialog(mContext, R.style.FullscreenDialogTheme);
+        dialog.setContentView(R.layout.dia_fsd1);
 
-        ImageView iv_close = (ImageView) fullscreenDialog.findViewById(R.id.dia_fsd_iv_close);
-        ImageView iv_main = (ImageView) fullscreenDialog.findViewById(R.id.dia_fsd_iv_main);
+        ImageView iv_close = (ImageView) dialog.findViewById(R.id.dia_fsd_iv_close);
+        ImageView iv_main = (ImageView) dialog.findViewById(R.id.dia_fsd_iv_main);
 
         Glide.with(mContext).load(R.mipmap.img_dia_fsd).into(iv_main);
 
@@ -466,85 +466,85 @@ public class Dia_Fragment extends Fragment implements View.OnClickListener
             @Override
             public void onClick(View v)
             {
-                fullscreenDialog.dismiss();
+                dialog.dismiss();
             }
         });
 
-        fullscreenDialog.show();
+        dialog.show();
     }
 
     private void showFullScreenDialog2()
     {
-        final Dialog fullscreenDialog = new Dialog(mContext, R.style.FullscreenDialogTheme2);
-        fullscreenDialog.setContentView(R.layout.dia_fsd2);
+        final Dialog dialog = new Dialog(mContext, R.style.FullscreenDialogTheme_Center);
+        dialog.setContentView(R.layout.dia_fsd2);
 
-        fullscreenDialog.findViewById(R.id.tv_cam).setOnClickListener(new View.OnClickListener()
+        dialog.findViewById(R.id.tv_cam).setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
                 Toast.makeText(mContext, "Camera", Toast.LENGTH_SHORT).show();
 
-                fullscreenDialog.dismiss();
+                dialog.dismiss();
             }
         });
 
-        fullscreenDialog.findViewById(R.id.tv_alm).setOnClickListener(new View.OnClickListener()
+        dialog.findViewById(R.id.tv_alm).setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
                 Toast.makeText(mContext, "Album", Toast.LENGTH_SHORT).show();
 
-                fullscreenDialog.dismiss();
+                dialog.dismiss();
             }
         });
 
-        fullscreenDialog.show();
+        dialog.show();
     }
 
     private void showFullScreenDialog3()
     {
-        final Dialog fullscreenDialog = new Dialog(mContext, R.style.FullscreenDialogTheme3);
-        fullscreenDialog.setContentView(R.layout.dia_fsd3);
+        final Dialog dialog = new Dialog(mContext, R.style.FullscreenDialogTheme_Bottom);
+        dialog.setContentView(R.layout.dia_fsd3);
 
-        fullscreenDialog.findViewById(R.id.rl).setOnClickListener(new View.OnClickListener()
+        dialog.findViewById(R.id.rl).setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
-                fullscreenDialog.dismiss();
+                dialog.dismiss();
             }
         });
 
-        fullscreenDialog.findViewById(R.id.tv_cam).setOnClickListener(new View.OnClickListener()
+        dialog.findViewById(R.id.tv_cam).setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
                 Toast.makeText(mContext, "Camera", Toast.LENGTH_SHORT).show();
 
-                fullscreenDialog.dismiss();
+                dialog.dismiss();
             }
         });
 
-        fullscreenDialog.findViewById(R.id.tv_alm).setOnClickListener(new View.OnClickListener()
+        dialog.findViewById(R.id.tv_alm).setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
                 Toast.makeText(mContext, "Album", Toast.LENGTH_SHORT).show();
 
-                fullscreenDialog.dismiss();
+                dialog.dismiss();
             }
         });
 
-        fullscreenDialog.show();
+        dialog.show();
     }
 
     private void showDatePickerDialog()
     {
-        DatePickerDialog datePickerDialog = new DatePickerDialog(mContext, AlertDialog.THEME_HOLO_LIGHT, new DatePickerDialog.OnDateSetListener()
+        DatePickerDialog dialog = new DatePickerDialog(mContext, AlertDialog.THEME_HOLO_LIGHT, new DatePickerDialog.OnDateSetListener()
         {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int day)
@@ -556,17 +556,17 @@ public class Dia_Fragment extends Fragment implements View.OnClickListener
                 Calendar.getInstance().get(Calendar.MONTH),
                 Calendar.getInstance().get(Calendar.DATE));
 
-//        datePickerDialog.setTitle("Select your date");
-        datePickerDialog.show();
+//        dialog.setTitle("Select your date");
+        dialog.show();
 
-        setDatePickerDividerColor(mContext, datePickerDialog.getDatePicker(), R.color.textColorPrimary);
-        setDatePickerDialogPositiveButtonColor(mContext, datePickerDialog, R.color.colorPrimaryDark);
-        setDatePickerDialogNegativeButtonColor(mContext, datePickerDialog, R.color.colorAccent);
+        setDatePickerDividerColor(mContext, dialog.getDatePicker(), R.color.textColorPrimary);
+        setDatePickerDialogPositiveButtonColor(mContext, dialog, R.color.colorPrimaryDark);
+        setDatePickerDialogNegativeButtonColor(mContext, dialog, R.color.colorAccent);
     }
 
     private void showTimePickerDialog()
     {
-        TimePickerDialog timePickerDialog = new TimePickerDialog(mContext, AlertDialog.THEME_HOLO_LIGHT, new TimePickerDialog.OnTimeSetListener()
+        TimePickerDialog dialog = new TimePickerDialog(mContext, AlertDialog.THEME_HOLO_LIGHT, new TimePickerDialog.OnTimeSetListener()
         {
             @Override
             public void onTimeSet(TimePicker view, int hour, int minute)
@@ -578,12 +578,12 @@ public class Dia_Fragment extends Fragment implements View.OnClickListener
                 Calendar.getInstance().get(Calendar.MINUTE),
                 true);
 
-//        timePickerDialog.setTitle("Select your time");
-        timePickerDialog.show();
+//        dialog.setTitle("Select your time");
+        dialog.show();
 
-//        setTimePickerDividerColor(mContext, timePickerDialog.getTimePicker(),R.color.textColorPrimary);
-        setTimePickerDialogPositiveButtonColor(mContext, timePickerDialog, R.color.colorPrimaryDark);
-        setTimePickerDialogNegativeButtonColor(mContext, timePickerDialog, R.color.colorAccent);
+//        setTimePickerDividerColor(mContext, dialog.getTimePicker(),R.color.textColorPrimary);
+        setTimePickerDialogPositiveButtonColor(mContext, dialog, R.color.colorPrimaryDark);
+        setTimePickerDialogNegativeButtonColor(mContext, dialog, R.color.colorAccent);
     }
 
     private int num = 0;
@@ -732,19 +732,18 @@ public class Dia_Fragment extends Fragment implements View.OnClickListener
 
     private void showBottomSheetDialog()
     {
-        final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(mContext);
-        View dialogView = LayoutInflater.from(mContext).inflate(R.layout.dia_bsd, null);
-        bottomSheetDialog.setContentView(dialogView);
+        final BottomSheetDialog dialog = new BottomSheetDialog(mContext);
+        dialog.setContentView(R.layout.dia_bsd);
 
-        Button bt_ok = (Button) dialogView.findViewById(R.id.btn_dialog_bottom_sheet_ok);
-        Button bt_cancel = (Button) dialogView.findViewById(R.id.btn_dialog_bottom_sheet_cancel);
+        Button bt_ok = (Button) dialog.findViewById(R.id.btn_dialog_bottom_sheet_ok);
+        Button bt_cancel = (Button) dialog.findViewById(R.id.btn_dialog_bottom_sheet_cancel);
 
         bt_ok.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
-                bottomSheetDialog.dismiss();
+                dialog.dismiss();
             }
         });
 
@@ -753,15 +752,15 @@ public class Dia_Fragment extends Fragment implements View.OnClickListener
             @Override
             public void onClick(View v)
             {
-                bottomSheetDialog.dismiss();
+                dialog.dismiss();
             }
         });
 
-        ImageView iv = (ImageView) dialogView.findViewById(R.id.dia_bsd_iv);
+        ImageView iv = (ImageView) dialog.findViewById(R.id.dia_bsd_iv);
 
         Glide.with(mContext).load(R.mipmap.img_dia_bsd).into(iv);
 
-        bottomSheetDialog.show();
+        dialog.show();
     }
 
     private void showSnackbar(View view)

@@ -95,7 +95,7 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_margin="10dp"
-            android:text="full screen Dialog1"
+            android:text="full screen Dialog"
             android:textAllCaps="false"/>
 
         <Button
@@ -104,7 +104,7 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_margin="10dp"
-            android:text="full screen Dialog2"
+            android:text="full screen Dialog Center"
             android:textAllCaps="false"/>
 
         <Button
@@ -113,7 +113,7 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_margin="10dp"
-            android:text="full screen Dialog3"
+            android:text="full screen Dialog Bottom"
             android:textAllCaps="false"/>
 
         <Button
