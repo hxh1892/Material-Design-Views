@@ -146,7 +146,7 @@
             android:layout_height="wrap_content"
             android:foreground="?android:attr/selectableItemBackground"
             android:gravity="center_vertical"
-            android:onClick="scro"
+            android:onClick="scr"
             android:orientation="horizontal">
 
             <ImageView

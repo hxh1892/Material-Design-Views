@@ -3,6 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.hxh.mdv">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_icon"
@@ -27,7 +29,17 @@
 
         <activity android:name=".recyclerview.RV_RL_Activity"/>
 
-        <activity android:name=".Scro_Activity"/>
+        <activity android:name=".Scr_Activity"/>
+
+        <provider
+            android:name="com.hxh.utils.FileProviderFile"
+            android:authorities="com.hxh.mdv.provider.FileProviderFile"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepath_picture"/>
+        </provider>
 
     </application>
 

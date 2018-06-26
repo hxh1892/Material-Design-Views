@@ -19,8 +19,6 @@ public class Spi_Fragment extends Fragment
 {
     private Context mContext;
 
-    private Spinner spi1, spi2, spi3;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
@@ -37,9 +35,9 @@ public class Spi_Fragment extends Fragment
     {
         final String[] array = getResources().getStringArray(languages);
 
-        spi1 = (Spinner) v.findViewById(R.id.spi1);
-        spi2 = (Spinner) v.findViewById(R.id.spi2);
-        spi3 = (Spinner) v.findViewById(R.id.spi3);
+        Spinner spi1 = v.findViewById(R.id.spi1);
+        Spinner spi2 = v.findViewById(R.id.spi2);
+        Spinner spi3 = v.findViewById(R.id.spi3);
 
         spi1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
         {

@@ -14,7 +14,6 @@ public class Login_Activity extends AppCompatActivity
 {
     private Context mContext = this;
 
-    private Toolbar tb;
     private TextInputLayout til1, til2;
     private EditText et1, et2;
 
@@ -31,16 +30,16 @@ public class Login_Activity extends AppCompatActivity
 
     public void login(View v)
     {
-        String pnum = et1.getText().toString();
+        String phone = et1.getText().toString();
         String pass = et2.getText().toString();
 
-        if (TextUtils.isEmpty(pnum))
+        if (TextUtils.isEmpty(phone))
         {
             til1.setError("Input your phone number");
         }
         else
         {
-            if (pnum.length() != 11)
+            if (phone.length() != 11)
             {
                 til1.setError("Invalid phone number");
             }
@@ -65,7 +64,7 @@ public class Login_Activity extends AppCompatActivity
 
     private void initToolbar()
     {
-        tb = (Toolbar) findViewById(R.id.tb);
+        Toolbar tb = findViewById(R.id.tb);
 
         setSupportActionBar(tb);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -82,13 +81,13 @@ public class Login_Activity extends AppCompatActivity
 
     private void initTextInputLayout()
     {
-        til1 = (TextInputLayout) findViewById(R.id.til1);
-        til2 = (TextInputLayout) findViewById(R.id.til2);
+        til1 = findViewById(R.id.til1);
+        til2 = findViewById(R.id.til2);
     }
 
     private void initEditText()
     {
-        et1 = (EditText) findViewById(R.id.et1);
-        et2 = (EditText) findViewById(R.id.et2);
+        et1 = findViewById(R.id.et1);
+        et2 = findViewById(R.id.et2);
     }
 }

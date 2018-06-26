@@ -12,7 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ProgressBar;
 
-import com.hxh.DisplayUtils;
+import com.hxh.utils.DisplayUtils;
 import com.hxh.mdv.R;
 
 import java.util.ArrayList;
@@ -22,7 +22,6 @@ public class RV_RL_Activity extends AppCompatActivity
 {
     private Context mContext = this;
 
-    private Toolbar tb;
     private SwipeRefreshLayout srl;
     private RecyclerView rv;
     private ProgressBar pb;
@@ -59,7 +58,7 @@ public class RV_RL_Activity extends AppCompatActivity
 
         adapter = new RVAdapter(mContext, list);
 
-        pb = (ProgressBar) findViewById(R.id.pb);
+        pb = findViewById(R.id.pb);
 
         initToolbar();
         initSwipeRefreshLayout();
@@ -68,7 +67,7 @@ public class RV_RL_Activity extends AppCompatActivity
 
     private void initToolbar()
     {
-        tb = (Toolbar) findViewById(R.id.tb);
+        Toolbar tb = findViewById(R.id.tb);
 
         tb.setTitle("RecyclerView Refresh Load");
 
@@ -87,7 +86,7 @@ public class RV_RL_Activity extends AppCompatActivity
 
     private void initSwipeRefreshLayout()
     {
-        srl = (SwipeRefreshLayout) findViewById(R.id.srl);
+        srl = findViewById(R.id.srl);
 
         srl.setColorSchemeResources(android.R.color.holo_blue_light, android.R.color.holo_red_light, android.R.color.holo_orange_light, android.R.color.holo_green_light);
 
@@ -112,7 +111,7 @@ public class RV_RL_Activity extends AppCompatActivity
 
     private void initRecyclerView()
     {
-        rv = (RecyclerView) findViewById(R.id.rv);
+        rv = findViewById(R.id.rv);
 
         rv.setLayoutManager(new LinearLayoutManager(mContext));
 

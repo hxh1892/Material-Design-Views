@@ -16,8 +16,6 @@ public class Swi_Fragment extends Fragment
 {
     private Context mContext;
 
-    private SwitchCompat sc;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
@@ -32,7 +30,7 @@ public class Swi_Fragment extends Fragment
 
     private void initSwitchCompat(View v)
     {
-        sc = (SwitchCompat) v.findViewById(R.id.sc);
+        SwitchCompat sc = v.findViewById(R.id.sc);
 
         sc.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
         {

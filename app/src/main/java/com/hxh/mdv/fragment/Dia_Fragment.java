@@ -35,19 +35,19 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static com.hxh.PickerUtils.setDatePickerDialogNegativeButtonColor;
-import static com.hxh.PickerUtils.setDatePickerDialogPositiveButtonColor;
-import static com.hxh.PickerUtils.setDatePickerDividerColor;
-import static com.hxh.PickerUtils.setNumberPickerDividerColor;
-import static com.hxh.PickerUtils.setTimePickerDialogNegativeButtonColor;
-import static com.hxh.PickerUtils.setTimePickerDialogPositiveButtonColor;
+import static com.hxh.utils.PickerUtils.setDatePickerDialogNegativeButtonColor;
+import static com.hxh.utils.PickerUtils.setDatePickerDialogPositiveButtonColor;
+import static com.hxh.utils.PickerUtils.setDatePickerDividerColor;
+import static com.hxh.utils.PickerUtils.setNumberPickerDividerColor;
+import static com.hxh.utils.PickerUtils.setTimePickerDialogNegativeButtonColor;
+import static com.hxh.utils.PickerUtils.setTimePickerDialogPositiveButtonColor;
 import static com.hxh.mdv.R.id.set;
 
 public class Dia_Fragment extends Fragment implements View.OnClickListener
 {
     private Context mContext;
 
-    private Button bt_ad1, bt_ad2, bt_ad3, bt_ad_list, bt_ad_sc, bt_ad_mc, bt_ad_et, bt_pd1, bt_pd2, bt_fsd1, bt_fsd2, bt_fsd3, bt_dpd, bt_tpd, bt_npd, bt_bsd, bt_sb, bt_pm;
+    private Button bt_pm;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -180,24 +180,24 @@ public class Dia_Fragment extends Fragment implements View.OnClickListener
 
     private void initView(View view)
     {
-        bt_ad1 = (Button) view.findViewById(R.id.bt_ad1);
-        bt_ad2 = (Button) view.findViewById(R.id.bt_ad2);
-        bt_ad3 = (Button) view.findViewById(R.id.bt_ad3);
-        bt_ad_list = (Button) view.findViewById(R.id.bt_ad_list);
-        bt_ad_sc = (Button) view.findViewById(R.id.bt_ad_sc);
-        bt_ad_mc = (Button) view.findViewById(R.id.bt_ad_mc);
-        bt_ad_et = (Button) view.findViewById(R.id.bt_ad_et);
-        bt_pd1 = (Button) view.findViewById(R.id.bt_pd1);
-        bt_pd2 = (Button) view.findViewById(R.id.bt_pd2);
-        bt_fsd1 = (Button) view.findViewById(R.id.bt_fsd1);
-        bt_fsd2 = (Button) view.findViewById(R.id.bt_fsd2);
-        bt_fsd3 = (Button) view.findViewById(R.id.bt_fsd3);
-        bt_dpd = (Button) view.findViewById(R.id.bt_dpd);
-        bt_tpd = (Button) view.findViewById(R.id.bt_tpd);
-        bt_npd = (Button) view.findViewById(R.id.bt_npd);
-        bt_pm = (Button) view.findViewById(R.id.bt_pm);
-        bt_sb = (Button) view.findViewById(R.id.bt_sb);
-        bt_bsd = (Button) view.findViewById(R.id.bt_bsd);
+        Button bt_ad1 = view.findViewById(R.id.bt_ad1);
+        Button bt_ad2 = view.findViewById(R.id.bt_ad2);
+        Button bt_ad3 = view.findViewById(R.id.bt_ad3);
+        Button bt_ad_list = view.findViewById(R.id.bt_ad_list);
+        Button bt_ad_sc = view.findViewById(R.id.bt_ad_sc);
+        Button bt_ad_mc = view.findViewById(R.id.bt_ad_mc);
+        Button bt_ad_et = view.findViewById(R.id.bt_ad_et);
+        Button bt_pd1 = view.findViewById(R.id.bt_pd1);
+        Button bt_pd2 = view.findViewById(R.id.bt_pd2);
+        Button bt_fsd1 = view.findViewById(R.id.bt_fsd1);
+        Button bt_fsd2 = view.findViewById(R.id.bt_fsd2);
+        Button bt_fsd3 = view.findViewById(R.id.bt_fsd3);
+        Button bt_dpd = view.findViewById(R.id.bt_dpd);
+        Button bt_tpd = view.findViewById(R.id.bt_tpd);
+        Button bt_npd = view.findViewById(R.id.bt_npd);
+        bt_pm = view.findViewById(R.id.bt_pm);
+        Button bt_sb = view.findViewById(R.id.bt_sb);
+        Button bt_bsd = view.findViewById(R.id.bt_bsd);
 
         bt_ad1.setOnClickListener(this);
         bt_ad2.setOnClickListener(this);
@@ -456,8 +456,8 @@ public class Dia_Fragment extends Fragment implements View.OnClickListener
         final Dialog dialog = new Dialog(mContext, R.style.FullscreenDialogTheme);
         dialog.setContentView(R.layout.dia_fsd1);
 
-        ImageView iv_close = (ImageView) dialog.findViewById(R.id.dia_fsd_iv_close);
-        ImageView iv_main = (ImageView) dialog.findViewById(R.id.dia_fsd_iv_main);
+        ImageView iv_close = dialog.findViewById(R.id.dia_fsd_iv_close);
+        ImageView iv_main = dialog.findViewById(R.id.dia_fsd_iv_main);
 
         Glide.with(mContext).load(R.mipmap.img_dia_fsd).into(iv_main);
 
@@ -628,9 +628,9 @@ public class Dia_Fragment extends Fragment implements View.OnClickListener
                         setView(ll).
                         show();
 
-        NumberPicker np1 = (NumberPicker) ll.findViewById(R.id.dia_np_np_1);
-        NumberPicker np2 = (NumberPicker) ll.findViewById(R.id.dia_np_np_2);
-        final NumberPicker np3 = (NumberPicker) ll.findViewById(R.id.dia_np_np_3);
+        NumberPicker np1 = ll.findViewById(R.id.dia_np_np_1);
+        NumberPicker np2 = ll.findViewById(R.id.dia_np_np_2);
+        final NumberPicker np3 = ll.findViewById(R.id.dia_np_np_3);
 
         //设置不输入文本
         np1.setDescendantFocusability(NumberPicker.FOCUS_BLOCK_DESCENDANTS);
@@ -706,8 +706,8 @@ public class Dia_Fragment extends Fragment implements View.OnClickListener
         setNumberPickerDividerColor(mContext, np2, R.color.purple);
         setNumberPickerDividerColor(mContext, np3, R.color.pink);
 
-        TextView tv_acc = (TextView) ll.findViewById(R.id.dia_np_tv_accept);
-        TextView tv_can = (TextView) ll.findViewById(R.id.dia_np_tv_cancel);
+        TextView tv_acc = ll.findViewById(R.id.dia_np_tv_accept);
+        TextView tv_can = ll.findViewById(R.id.dia_np_tv_cancel);
 
         tv_acc.setOnClickListener(new View.OnClickListener()
         {
@@ -735,8 +735,8 @@ public class Dia_Fragment extends Fragment implements View.OnClickListener
         final BottomSheetDialog dialog = new BottomSheetDialog(mContext);
         dialog.setContentView(R.layout.dia_bsd);
 
-        Button bt_ok = (Button) dialog.findViewById(R.id.btn_dialog_bottom_sheet_ok);
-        Button bt_cancel = (Button) dialog.findViewById(R.id.btn_dialog_bottom_sheet_cancel);
+        Button bt_ok = dialog.findViewById(R.id.btn_dialog_bottom_sheet_ok);
+        Button bt_cancel = dialog.findViewById(R.id.btn_dialog_bottom_sheet_cancel);
 
         bt_ok.setOnClickListener(new View.OnClickListener()
         {
@@ -756,7 +756,7 @@ public class Dia_Fragment extends Fragment implements View.OnClickListener
             }
         });
 
-        ImageView iv = (ImageView) dialog.findViewById(R.id.dia_bsd_iv);
+        ImageView iv = dialog.findViewById(R.id.dia_bsd_iv);
 
         Glide.with(mContext).load(R.mipmap.img_dia_bsd).into(iv);
 

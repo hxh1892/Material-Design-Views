@@ -1,6 +1,7 @@
 package com.hxh.mdv.recyclerview;
 
 import android.animation.ObjectAnimator;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -15,7 +16,6 @@ import android.widget.TextView;
 
 import com.hxh.mdv.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class RVAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
@@ -26,9 +26,9 @@ public class RVAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     private boolean showFooter = true;
 
     private Context mContext;
-    private List<String> list = new ArrayList<>();
+    private List<String> list;
 
-    public RVAdapter(Context context, List<String> list)
+    RVAdapter(Context context, List<String> list)
     {
         this.mContext = context;
         this.list = list;
@@ -52,9 +52,9 @@ public class RVAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         {
             super(view);
 
-            cv = (CardView) view.findViewById(R.id.cv);
-            iv = (ImageView) view.findViewById(R.id.iv);
-            tv = (TextView) view.findViewById(R.id.tv);
+            cv = view.findViewById(R.id.cv);
+            iv = view.findViewById(R.id.iv);
+            tv = view.findViewById(R.id.tv);
         }
     }
 
@@ -84,6 +84,7 @@ public class RVAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         }
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position)
     {

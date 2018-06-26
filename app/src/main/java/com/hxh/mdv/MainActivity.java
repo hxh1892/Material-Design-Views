@@ -131,15 +131,15 @@ public class MainActivity extends AppCompatActivity
         startActivity(new Intent(mContext, RV_RL_Activity.class));
     }
 
-    public void scro(View v)
+    public void scr(View v)
     {
         dl.closeDrawer(ll_left);
-        startActivity(new Intent(mContext, Scro_Activity.class));
+        startActivity(new Intent(mContext, Scr_Activity.class));
     }
 
     private void initToolbar()
     {
-        tb = (Toolbar) findViewById(R.id.tb);
+        tb = findViewById(R.id.tb);
 
 //        //设置导航栏图标
 //        tb.setNavigationIcon(R.mipmap.bt_menu);
@@ -206,7 +206,7 @@ public class MainActivity extends AppCompatActivity
 
     private void initTabLayout()
     {
-        tl = (TabLayout) findViewById(R.id.tl);
+        tl = findViewById(R.id.tl);
 
         tl.setupWithViewPager(vp);
 
@@ -216,10 +216,10 @@ public class MainActivity extends AppCompatActivity
 
     private void initDrawerLayout()
     {
-        ll_left = (LinearLayout) findViewById(R.id.ll_left);
-        rl_right = (RelativeLayout) findViewById(R.id.rl_right);
+        ll_left = findViewById(R.id.ll_left);
+        rl_right = findViewById(R.id.rl_right);
 
-        dl = (DrawerLayout) findViewById(R.id.dl);
+        dl = findViewById(R.id.dl);
 
         dl.addDrawerListener(new DrawerLayout.DrawerListener()
         {
@@ -271,14 +271,14 @@ public class MainActivity extends AppCompatActivity
 
     private void initViewPager()
     {
-        vp = (ViewPager) findViewById(R.id.vp);
+        vp = findViewById(R.id.vp);
 
         vp.setAdapter(new VPAdapter(getSupportFragmentManager()));
     }
 
     private class VPAdapter extends FragmentPagerAdapter
     {
-        public VPAdapter(FragmentManager fm)
+        VPAdapter(FragmentManager fm)
         {
             super(fm);
         }

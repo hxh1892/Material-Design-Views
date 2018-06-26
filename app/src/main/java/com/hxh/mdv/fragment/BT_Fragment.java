@@ -11,9 +11,6 @@ import com.hxh.mdv.R;
 
 public class BT_Fragment extends Fragment
 {
-    private FloatingActionButton fabt1;
-    private FloatingActionButton fabt2;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
@@ -26,10 +23,10 @@ public class BT_Fragment extends Fragment
 
     private void initFloatingActionButton(View v)
     {
-        fabt1 = (FloatingActionButton) v.findViewById(R.id.fabt1);
-        fabt2 = (FloatingActionButton) v.findViewById(R.id.fabt2);
+        FloatingActionButton fab1 = v.findViewById(R.id.fabt1);
+        FloatingActionButton fab2 = v.findViewById(R.id.fabt2);
 
-        fabt1.setOnClickListener(new View.OnClickListener()
+        fab1.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
@@ -38,7 +35,7 @@ public class BT_Fragment extends Fragment
             }
         });
 
-        fabt2.setOnClickListener(new View.OnClickListener()
+        fab2.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)

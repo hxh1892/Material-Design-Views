@@ -1,4 +1,4 @@
-package com.hxh;
+package com.hxh.utils;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
@@ -116,7 +116,7 @@ public class PickerUtils
         //修改按钮颜色这个必须在show或者create方法后面
         //确认按钮
         Button bt_pos = datePickerDialog.getButton(DialogInterface.BUTTON_POSITIVE);
-        bt_pos.setTextColor(context.getResources().getColor(coclor, null));
+        bt_pos.setTextColor(context.getResources().getColor(coclor));
     }
 
     public static void setDatePickerDialogNegativeButtonColor(Context context, DatePickerDialog datePickerDialog, int coclor)
@@ -124,7 +124,7 @@ public class PickerUtils
         //修改按钮颜色这个必须在show或者create方法后面
         //取消按钮
         Button bt_neg = datePickerDialog.getButton(DialogInterface.BUTTON_NEGATIVE);
-        bt_neg.setTextColor(context.getResources().getColor(coclor, null));
+        bt_neg.setTextColor(context.getResources().getColor(coclor));
     }
 
     public static void setTimePickerDialogPositiveButtonColor(Context context, TimePickerDialog timePickerDialog, int coclor)
@@ -132,7 +132,7 @@ public class PickerUtils
         //修改按钮颜色这个必须在show或者create方法后面
         //确认按钮
         Button bt_pos = timePickerDialog.getButton(DialogInterface.BUTTON_POSITIVE);
-        bt_pos.setTextColor(context.getResources().getColor(coclor, null));
+        bt_pos.setTextColor(context.getResources().getColor(coclor));
     }
 
     public static void setTimePickerDialogNegativeButtonColor(Context context, TimePickerDialog timePickerDialog, int coclor)
@@ -140,6 +140,6 @@ public class PickerUtils
         //修改按钮颜色这个必须在show或者create方法后面
         //取消按钮
         Button bt_neg = timePickerDialog.getButton(DialogInterface.BUTTON_NEGATIVE);
-        bt_neg.setTextColor(context.getResources().getColor(coclor, null));
+        bt_neg.setTextColor(context.getResources().getColor(coclor));
     }
 }

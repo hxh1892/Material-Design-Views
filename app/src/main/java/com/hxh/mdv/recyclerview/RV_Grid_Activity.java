@@ -1,6 +1,7 @@
 package com.hxh.mdv.recyclerview;
 
 import android.animation.ObjectAnimator;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Rect;
@@ -18,7 +19,7 @@ import android.view.animation.AccelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.TextView;
 
-import com.hxh.DisplayUtils;
+import com.hxh.utils.DisplayUtils;
 import com.hxh.mdv.R;
 
 import java.util.ArrayList;
@@ -28,7 +29,6 @@ public class RV_Grid_Activity extends AppCompatActivity
 {
     private Context mContext = this;
 
-    private Toolbar tb;
     private RecyclerView rv;
     private RecyclerViewAdapter adapter = new RecyclerViewAdapter();
     private List<String> list = new ArrayList<>();
@@ -76,7 +76,7 @@ public class RV_Grid_Activity extends AppCompatActivity
 
     private void initToolbar()
     {
-        tb = (Toolbar) findViewById(R.id.tb);
+        Toolbar tb = findViewById(R.id.tb);
 
         tb.setTitle("RecyclerView Grid");
 
@@ -95,7 +95,7 @@ public class RV_Grid_Activity extends AppCompatActivity
 
     private void initRecyclerView()
     {
-        rv = (RecyclerView) findViewById(R.id.rv);
+        rv = findViewById(R.id.rv);
 
         rv.setLayoutManager(new GridLayoutManager(mContext, lines));
 
@@ -153,8 +153,8 @@ public class RV_Grid_Activity extends AppCompatActivity
             {
                 super(view);
 
-                cv = (CardView) view.findViewById(R.id.cv);
-                tv = (TextView) view.findViewById(R.id.tv);
+                cv = view.findViewById(R.id.cv);
+                tv = view.findViewById(R.id.tv);
             }
         }
 
@@ -164,6 +164,7 @@ public class RV_Grid_Activity extends AppCompatActivity
             return new Viewholder(LayoutInflater.from(mContext).inflate(R.layout.item_rv_grid, parent, false));
         }
 
+        @SuppressLint("ClickableViewAccessibility")
         @Override
         public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position)
         {
@@ -222,13 +223,13 @@ public class RV_Grid_Activity extends AppCompatActivity
             return list.size();
         }
 
-        public void addItem(int position)
+        void addItem(int position)
         {
             list.add(position, "RV_Grid");
             notifyItemInserted(position);
         }
 
-        public void removeItem(int position)
+        void removeItem(int position)
         {
             list.remove(position);
             notifyItemRemoved(position);

@@ -26,8 +26,8 @@ public class SB_Fragment extends Fragment
 
         View view = inflater.inflate(R.layout.frg_sb, null);
 
-        cv = (CardView) view.findViewById(R.id.card_view);
-        tv = (TextView) view.findViewById(R.id.tv);
+        cv = view.findViewById(R.id.card_view);
+        tv = view.findViewById(R.id.tv);
 
         initSeekBar(view);
 
@@ -36,9 +36,9 @@ public class SB_Fragment extends Fragment
 
     private void initSeekBar(View v)
     {
-        SeekBar sb1 = (SeekBar) v.findViewById(R.id.sb1);
-        SeekBar sb2 = (SeekBar) v.findViewById(R.id.sb2);
-        SeekBar sb3 = (SeekBar) v.findViewById(R.id.sb3);
+        SeekBar sb1 = v.findViewById(R.id.sb1);
+        SeekBar sb2 = v.findViewById(R.id.sb2);
+        SeekBar sb3 = v.findViewById(R.id.sb3);
 
         sb1.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener()
         {

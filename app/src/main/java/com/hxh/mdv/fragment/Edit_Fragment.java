@@ -16,7 +16,6 @@ public class Edit_Fragment extends Fragment implements View.OnClickListener
 {
     private Context mContext;
 
-    private AutoCompleteTextView actv;
     private EditText et1, et2, et3;
 
     @Override
@@ -40,7 +39,7 @@ public class Edit_Fragment extends Fragment implements View.OnClickListener
 
     private void initAutoCompleteTextView(View v)
     {
-        actv = (AutoCompleteTextView) v.findViewById(R.id.actv);
+        AutoCompleteTextView actv = v.findViewById(R.id.actv);
 
         String[] res = {"air", "airline", "airbag", "airbus", "Airbnb", "airplane", "air dry", "air 123", "air @#@"};
 
