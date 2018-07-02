@@ -27,7 +27,9 @@ import com.hxh.mdv.R;
 import com.hxh.mdv.Scr_Activity;
 import com.hxh.mdv.recyclerview.RV_Linear_Activity;
 import com.hxh.mdv.recyclerview.RV_RL_Activity;
-import com.hxh.utils.FileUtils;
+import com.hxh.utils.ApkUtils;
+import com.hxh.utils.FileManageUtils;
+import com.hxh.utils.UriUtils;
 import com.tbruyelle.rxpermissions2.Permission;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 
@@ -36,7 +38,6 @@ import java.io.File;
 import io.reactivex.functions.Consumer;
 
 import static android.os.Environment.getExternalStoragePublicDirectory;
-import static com.hxh.utils.FileManageUtils.moveFile;
 
 public class CV_Fragment extends Fragment implements View.OnClickListener, View.OnTouchListener
 {
@@ -55,7 +56,7 @@ public class CV_Fragment extends Fragment implements View.OnClickListener, View.
     {
         mContext = getContext();
 
-        newApkFile = new File(getExternalStoragePublicDirectory("mdv").toString() + "/mdv.apk");
+        newApkFile = new File(getExternalStoragePublicDirectory("mdv"), "/mdv.apk");
 
         View view = inflater.inflate(R.layout.frg_cv, null);
 
@@ -261,7 +262,7 @@ public class CV_Fragment extends Fragment implements View.OnClickListener, View.
     {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("*/*");
-        intent.putExtra(Intent.EXTRA_STREAM, FileUtils.getUriFromFile(mContext, newApkFile));
+        intent.putExtra(Intent.EXTRA_STREAM, UriUtils.getUriFromFile(mContext, newApkFile));
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(Intent.createChooser(intent, "Choose to share"));
     }
@@ -285,7 +286,7 @@ public class CV_Fragment extends Fragment implements View.OnClickListener, View.
         @Override
         protected Integer doInBackground(String... params)
         {
-            return moveFile(FileUtils.getApkFile(mContext), newApkFile);
+            return FileManageUtils.copyFile(ApkUtils.getApkFile(mContext), newApkFile);
         }
 
         @Override

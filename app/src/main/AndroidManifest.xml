@@ -32,13 +32,13 @@
         <activity android:name=".Scr_Activity"/>
 
         <provider
-            android:name="com.hxh.utils.FileProviderFile"
+            android:name="android.support.v4.content.FileProvider"
             android:authorities="com.hxh.mdv.provider.FileProviderFile"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/filepath_picture"/>
+                android:resource="@xml/file_paths"/>
         </provider>
 
     </application>

@@ -13,7 +13,7 @@ public class FileManageUtils
     //return 0：移动成功
     //return 1：复制文件不存在
     //return 2：粘贴文件已存在
-    public static int moveFile(File copyFile, File pasteFile)
+    public static int copyFile(File copyFile, File pasteFile)
     {
         if (pasteFile.exists())
         {
@@ -22,21 +22,47 @@ public class FileManageUtils
         else
         {
             pasteFile.getParentFile().mkdirs();
-        }
 
-        if (copyFile.exists())
-        {
-            copyFile(copyFile, pasteFile);
-        }
-        else
-        {
-            return 1;
+            if (copyFile.exists())
+            {
+//                copyFileCopy(copyFile, pasteFile);
+
+                try
+                {
+                    FileInputStream fis = new FileInputStream(copyFile);
+                    FileOutputStream fos = new FileOutputStream(pasteFile);
+
+                    //1bit写一次
+//				int temp;
+//				while((temp=fis.read())>0)
+//				{
+//					fos.write(temp);
+//				}
+
+                    //1kb写一次
+                    byte[] buffer = new byte[1024];
+                    int temp;
+                    while ((temp = fis.read(buffer)) > 0)
+                    {
+                        fos.write(buffer, 0, temp);
+                    }
+
+                    fis.close();
+                    fos.flush();
+                    fos.close();
+                }
+                catch (IOException e) {e.printStackTrace();}
+            }
+            else
+            {
+                return 1;
+            }
         }
 
         return 0;
     }
 
-    private static void copyFile(File fromFile, File toFile)
+    private static void copyFileCopy(File fromFile, File toFile)
     {
         try
         {

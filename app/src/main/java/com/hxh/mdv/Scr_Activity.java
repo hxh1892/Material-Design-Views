@@ -15,7 +15,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Toast;
 
-import com.hxh.utils.FileUtils;
+import com.hxh.utils.ApkUtils;
+import com.hxh.utils.FileManageUtils;
+import com.hxh.utils.UriUtils;
 import com.tbruyelle.rxpermissions2.Permission;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 
@@ -24,7 +26,6 @@ import java.io.File;
 import io.reactivex.functions.Consumer;
 
 import static android.os.Environment.getExternalStoragePublicDirectory;
-import static com.hxh.utils.FileManageUtils.moveFile;
 
 public class Scr_Activity extends AppCompatActivity
 {
@@ -38,7 +39,7 @@ public class Scr_Activity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_scr);
 
-        newApkFile = new File(getExternalStoragePublicDirectory("mdv").toString() + "/mdv.apk");
+        newApkFile = new File(getExternalStoragePublicDirectory("mdv"), "/mdv.apk");
 
         initToolbar();
         initCollapsingToolbarLayout();
@@ -120,7 +121,7 @@ public class Scr_Activity extends AppCompatActivity
 
     public void share(View v)
     {
-       getPermission();
+        getPermission();
     }
 
     @SuppressLint("CheckResult")
@@ -128,7 +129,7 @@ public class Scr_Activity extends AppCompatActivity
     {
         //监听具体的某一个权限是否进行了授权
         new RxPermissions(this)
-                .requestEach( Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                .requestEach(Manifest.permission.WRITE_EXTERNAL_STORAGE)
                 .subscribe(new Consumer<Permission>()
                 {
                     @Override
@@ -168,7 +169,7 @@ public class Scr_Activity extends AppCompatActivity
     {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("*/*");
-        intent.putExtra(Intent.EXTRA_STREAM, FileUtils.getUriFromFile(mContext, newApkFile));
+        intent.putExtra(Intent.EXTRA_STREAM, UriUtils.getUriFromFile(mContext, newApkFile));
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(Intent.createChooser(intent, "Choose to share"));
     }
@@ -192,7 +193,7 @@ public class Scr_Activity extends AppCompatActivity
         @Override
         protected Integer doInBackground(String... params)
         {
-            return moveFile(FileUtils.getApkFile(mContext), newApkFile);
+            return FileManageUtils.copyFile(ApkUtils.getApkFile(mContext), newApkFile);
         }
 
         @Override
